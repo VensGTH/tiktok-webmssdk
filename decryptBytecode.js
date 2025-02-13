@@ -1,8 +1,8 @@
 const bytecode = require("./bytecode.js");
 
-const decrypted = atob(bytecode);
+const decoded = atob(bytecode);
 
-const keySum = [...decrypted.slice(4, 8)].reduce(
+const keySum = [...decoded.slice(4, 8)].reduce(
   (sum, c) => sum + c.charCodeAt(0),
   0
 );
