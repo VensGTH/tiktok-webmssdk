@@ -13,6 +13,6 @@ function xorDecrypt(char, index) {
   return char.charCodeAt(0) ^ (baseKey + modifier) % 256;
 }
 
-const dico = Uint8Array.from(decrypted.slice(8), xorDecrypt.bind(keySum % 256));
+const dico = Uint8Array.from(decoded.slice(8), xorDecrypt.bind(keySum % 256));
 
 module.exports = dico;
